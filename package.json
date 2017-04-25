@@ -1,6 +1,7 @@
 {
   "name": "winamp2-js",
   "version": "1.0.0",
+  "electronVersion": "1.6.6",
   "description": "Winamp 2 implemented in HTML5 and JavaScript",
   "main": "index.html",
   "scripts": {
