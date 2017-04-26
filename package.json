@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "electronVersion": "1.6.6",
   "description": "Winamp 2 implemented in HTML5 and JavaScript",
-  "main": "index.html",
+  "main": "main.js",
   "scripts": {
     "lint": "eslint .",
     "build": "webpack --config=webpack.production.config.js",
@@ -42,6 +42,7 @@
     "babel-preset-react": "^6.11.1",
     "canvas-mock": "0.0.0",
     "css-loader": "^0.28.0",
+    "electron": "^1.6.6",
     "eslint": "3.19.0",
     "eslint-config-prettier": "^1.5.0",
     "eslint-plugin-react": "6.10.3",
