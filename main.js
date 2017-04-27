@@ -1,6 +1,7 @@
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, remote} = require('electron')
 const path = require('path')
 const url = require('url')
+
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -8,17 +9,17 @@ let win
 
 function createWindow () {
   // Create the browser window.
-  win = new BrowserWindow({width: 275, height: 135})
-
+  win = new BrowserWindow({width: 275, height: 116, frame: false, resizable: true, transparent: true})
+console.log(remote);
   // and load the index.html of the app.
   win.loadURL(url.format({
     pathname: path.join(__dirname, '/index.html'),
     protocol: 'file:',
     slashes: true
   }))
-
+ 
   // Open the DevTools.
-  //win.webContents.openDevTools()
+  win.webContents.openDevTools()
 
   // Emitted when the window is closed.
   win.on('closed', () => {
@@ -48,6 +49,7 @@ app.on('activate', () => {
   // dock icon is clicked and there are no other windows open.
   if (win === null) {
     createWindow()
+    
   }
 })
 

@@ -53,6 +53,7 @@
     height: 14px;
     width: 275px;
     cursor:url('../cursors/TITLEBAR.PNG'), auto;
+    -webkit-app-region: drag;
 }
 
 #winamp2-js #option,
