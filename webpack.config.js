@@ -27,5 +27,6 @@ module.exports = {
     filename: "winamp.js",
     publicPath: "/built/",
     path: path.resolve(__dirname, "built")
-  }
+  },
+  target: 'electron'
 };

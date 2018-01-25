@@ -30,6 +30,10 @@ import { loadFileFromReference } from "../actionCreators";
 
 import "../../css/main-window.css";
 
+
+
+
+
 export class MainWindow extends React.Component {
   constructor(props) {
     super(props);

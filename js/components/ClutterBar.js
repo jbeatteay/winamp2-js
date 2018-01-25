@@ -3,6 +3,16 @@ import { connect } from "react-redux";
 import classnames from "classnames";
 
 import { SET_FOCUS, TOGGLE_DOUBLESIZE_MODE, UNSET_FOCUS } from "../actionTypes";
+const {ipc} = require('electron');
+
+
+
+    // now i have everything from BrowserWindow api...
+
+
+  
+  
+
 
 const ClutterBar = props => (
   <div id="clutter-bar">
@@ -27,6 +37,7 @@ const mapDispatchToProps = dispatch => ({
   handleMouseDown: () => dispatch({ type: SET_FOCUS, input: "double" }),
   handleMouseUp: () => {
     dispatch({ type: TOGGLE_DOUBLESIZE_MODE });
+    dispatch(remote.send('resize', 1000, 800));
     dispatch({ type: UNSET_FOCUS });
   }
 });
